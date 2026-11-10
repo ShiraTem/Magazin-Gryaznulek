@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Артемия</title>
+    
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #f4f6f8;
+            color: #2b2b2b;
+            line-height: 1.5;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        header {
+            background: #ffffff;
+            padding: 12px 0;
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        .header-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #2e7d32;
+            letter-spacing: 0.5px;
+        }
+
+        .btn {
+            background-color: #2e7d32;
+            color: #ffffff;
+            padding: 10px 18px;
+            border-radius: 6px;
+            border: none;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        .btn:hover {
+            background-color: #1b5e20;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('https://images.unsplash.com/photo-1610832958506-aa56368176cf?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+            color: #ffffff;
+            text-align: center;
+            padding: 90px 20px;
+        }
+
+        .hero h1 {
+            font-size: 38px;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 17px;
+            margin-bottom: 25px;
+            opacity: 0.9;
+        }
+
+        .catalog {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 35px;
+            color: #1a1a1a;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .product-card {
+            background: #ffffff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .product-img {
+            height: 180px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .product-info {
+            padding: 18px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .product-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .product-price {
+            color: #2e7d32;
+            font-size: 17px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .product-card .btn {
+            width: 100%;
+            margin-top: auto;
+        }
+
+        /* Подвал */
+        footer {
+            background: #212529;
+            color: #ced4da;
+            text-align: center;
+            padding: 25px 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-flex">
+            <a href="#" class="logo">Артемия</a>
+            <button class="btn">Корзина</button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Свежие фрукты с доставкой</h1>
+            <p>Отборные витамины прямо к вашему столу</p>
+            <a href="#catalog" class="btn" style="display: inline-block;">Смотреть товары</a>
+        </div>
+    </section>
+
+    <section class="catalog container" id="catalog">
+        <h2 class="section-title">Наши фрукты</h2>
+        
+        <div class="products-grid">
+            
+            <div class="product-card">
+                <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?auto=format&fit=crop&w=500&q=80');"></div>
+                <div class="product-info">
+                    <div class="product-title">Прикольные Яблоки</div>
+                    <div class="product-price">180 ₽ / кг</div>
+                    <button class="btn">В корзину</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?auto=format&fit=crop&w=500&q=80');"></div>
+                <div class="product-info">
+                    <div class="product-title">Некрутые Бананы</div>
+                    <div class="product-price">140 ₽ / кг</div>
+                    <button class="btn">В корзину</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1550258987-190a2d41a8ba?auto=format&fit=crop&w=500&q=80');"></div>
+                <div class="product-info">
+                    <div class="product-title">Ананас крутой</div>
+                    <div class="product-price">450 ₽ / 500г</div>
+                    <button class="btn">В корзину</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Фруктопия. Артем Вадимович поставьте 5.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
